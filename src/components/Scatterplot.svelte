@@ -25,7 +25,8 @@
       }
     });
 
-   
+console.log(data)
+console.log(filteredData)   
   $: selectedPoint = data.find(({ player }) => player === selectedPlayer);
   console.log(data);
   var textAccessor = d => d.player;
