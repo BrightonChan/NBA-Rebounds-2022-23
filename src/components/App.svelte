@@ -143,25 +143,32 @@
 'Justise Winslow', 'Christian Wood', 'Delon Wright',
 'McKinley Wright IV', 'Gabe York', 'Thaddeus Young', 'Trae Young',
 'Omer Yurtseven', 'Cody Zeller', 'Ivica Zubac'];
-  let nbaStats = [];
+  let nbaStats;
   let val = "";
   let selectedPosition = "allPositions";
   let filteredData;
 
   $: value = null;
 
-  onMount(async () => {
+  /*onMount(async () => {
 
     const res = await fetch('nba2023.csv'); 
 
     const csv = await res.text();
-
-    nbaStats = d3.csvParse(csv, d3.autoType)
-
     
-    console.log("163");
-    console.log(nbaStats.player);
+
+    nbaStats = d3.csvParse(csv)
+
+    console.log(res)
+  });*/
+
+  onMount(async () => {
+    const response = await fetch('nba2023.csv');
+    const data = await response.text();
+    nbaStats = d3.csvParse(data);
+    console.log(nbaStats);
   });
+
   
 
   const handleSelect = event => {

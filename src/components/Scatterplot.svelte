@@ -6,6 +6,10 @@
   import YAxis from './chart/YAxis.svelte';
   import Crosshair from './chart/Crosshair.svelte';
   import Tooltip from './chart/Tooltip.svelte';
+  
+  
+
+
 
   export let data;
   export let selectedPlayer;
@@ -21,16 +25,14 @@
       }
     });
 
-    console.log(data);
-    console.log(filteredData);
    
   $: selectedPoint = data.find(({ player }) => player === selectedPlayer);
-
-  const textAccessor = d => d.player;
-  const xAccessor = d => +d.Minutes_Played;
-  const yAccessor = d => +d.Rebounds;
-  const xExtent = d3.extent(data, xAccessor);
-  const yExtent = d3.extent(data, yAccessor);
+  console.log(data);
+  var textAccessor = d => d.player;
+  var xAccessor = d => +d.Minutes_Played;
+  var yAccessor = d => +d.Rebounds;
+  var xExtent = d3.extent(data, xAccessor);
+  var yExtent = d3.extent(data, yAccessor);
 
   const formatTick = d3.format('.2s');
   const formatLabel = d3.format('.1f');
