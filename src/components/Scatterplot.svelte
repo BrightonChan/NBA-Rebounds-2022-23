@@ -21,6 +21,7 @@
       }
     });
 
+   
   $: selectedPoint = data.find(({ player }) => player === selectedPlayer);
 
   const textAccessor = d => d.player;

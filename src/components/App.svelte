@@ -1,9 +1,9 @@
 <script>
   import * as d3 from 'd3';
-  import Header from './components/Header.svelte';
+  import Header from './Header.svelte';
   import Select from 'svelte-select';
-  import Scatterplot from './components/Scatterplot.svelte';
-  import Footer from './components/Footer.svelte';
+  import Scatterplot from './Scatterplot.svelte';
+  import Footer from './Footer.svelte';
   /*import { players } from '../static/players2023.js';*/
   import { onMount } from 'svelte';
 
