@@ -21,6 +21,8 @@
       }
     });
 
+    console.log(data);
+    console.log(filteredData);
    
   $: selectedPoint = data.find(({ player }) => player === selectedPlayer);
 
@@ -162,6 +164,7 @@
       />
 
       {#each data as d}
+      
         <circle
           class="chart__point"
           r="7"

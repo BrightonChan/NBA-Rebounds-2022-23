@@ -158,10 +158,9 @@
 
     nbaStats = d3.csvParse(csv, d3.autoType)
 
-    // console.log(nbaStats);
-    //d3.csv('/src/components/data/nba2023.csv').then(data => (nbaStats = data));
-
-    console.log(nbaStats);
+    
+    console.log("163");
+    console.log(nbaStats.player);
   });
   
 
